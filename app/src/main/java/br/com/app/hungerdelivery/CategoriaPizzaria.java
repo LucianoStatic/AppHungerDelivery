@@ -92,6 +92,7 @@ public class CategoriaPizzaria extends AppCompatActivity {
         toolbar.setTitle("Pizzarias");
         toolbar.setTitleTextColor(Color.WHITE);
         setSupportActionBar(toolbar);
+       
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_west);
 

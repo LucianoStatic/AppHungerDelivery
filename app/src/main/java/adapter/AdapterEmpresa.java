@@ -82,7 +82,7 @@ public class AdapterEmpresa extends RecyclerView.Adapter<AdapterEmpresa.MyViewHo
                             holder.tempo.setText(empresa.getTempoEntrega() + " Min");
                             holder.entrega.setText("R$ " + empresa.getPrecoEntrega().toString());
                             holder.status.setText(empresa.getStatus());
-                            holder.status.setTextColor(Color.GREEN);
+                            holder.status.setTextColor(Color.parseColor("#73C501"));
                             holder.iconeStatus.setBackgroundResource(R.drawable.ic_aberto24);
                             //Carregar imagem
                             String urlImagem = empresa.getUrlImagemEmpresa();
@@ -95,7 +95,7 @@ public class AdapterEmpresa extends RecyclerView.Adapter<AdapterEmpresa.MyViewHo
                             holder.tempo.setText(empresa.getTempoEntrega() + " Min");
                             holder.entrega.setText("R$ " + empresa.getPrecoEntrega().toString());
                             holder.status.setText(empresa.getStatus());
-                            holder.status.setTextColor(Color.RED);
+                            holder.status.setTextColor(Color.parseColor("#EA1D2C"));
                             holder.iconeStatus.setBackgroundResource(R.drawable.ic_fechado24);
 
 

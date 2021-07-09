@@ -64,28 +64,25 @@ public class ConfiguracaoEmpresa extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_configuracao_empresa);
 
-        /**
-         * CONFIGURAÇÕES INICIAIS
-         */
+
+        //TODO: CONFIGURAÇÕES INICIAIS
+
         inicializarComponentes();
 
 
-        /**
-         * INICIALIZANDO AS REFERENCIAS DO FIREBASE
-         */
+        //TODO: INICIALIZANDO AS REFERENCIAS DO FIREBASE
+
         referenciaStorageImages = ConfiguracaoFirebase.metodoReferenciaFoto();
         referenciaFirebase = ConfiguracaoFirebase.metodoReferenciaGetFirebase();
 
 
-        /**
-         * PEGANDO ID DO DONO DA EMPRESA QUE ESTA LOGADO
-         */
+        //TODO: PEGANDO ID DO DONO DA EMPRESA QUE ESTA LOGADO
+
         idDonoEmpresaLogado = UsuarioFirebase.pegarIdUsuario();
 
 
-        /**
-         * CONFIGURAÇOES DA TOOLBAR
-         */
+        //TODO: CONFIGURAÇOES DA TOOLBAR
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle("Configurações");
 
@@ -94,9 +91,8 @@ public class ConfiguracaoEmpresa extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
-        /**
-         * EVENTO DE CLICK PRA BUSCAR UMA IMAGEM DE PERFIL PARA A EMPRESA
-         */
+        //TODO: EVENTO DE CLICK PRA BUSCAR UMA IMAGEM DE PERFIL PARA A EMPRESA
+
         imagemPerfilEmpresa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -122,9 +118,8 @@ public class ConfiguracaoEmpresa extends AppCompatActivity {
     }
 
 
-    /**
-     * METODO PARA VALIDAR OS DADOS DA EMPRESA
-     */
+    //TODO: METODO PARA VALIDAR OS DADOS DA EMPRESA
+
     public void validarDadosEmpresa(View view) {
 
         //Valida se os campos forem preenchidos

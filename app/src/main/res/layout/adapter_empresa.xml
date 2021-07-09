@@ -18,6 +18,7 @@
             android:layout_margin="5dp"
             android:layout_height="100dp"
             android:src="@drawable/ic_loja"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -98,6 +99,7 @@
             android:layout_marginEnd="64dp"
             android:layout_marginBottom="16dp"
             android:text="Fechado"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -126,7 +128,7 @@
     <include
         layout="@layout/divisor"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="5dp" />
 
 </LinearLayout>
 

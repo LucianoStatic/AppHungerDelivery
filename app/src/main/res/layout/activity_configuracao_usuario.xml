@@ -7,6 +7,7 @@
     android:orientation="vertical"
     tools:context=".ConfiguracaoUsuario">
 
+
     <include
         android:id="@+id/include"
         layout="@layout/toolbar"
@@ -15,5 +16,84 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="45dp"
+        android:fontFamily="@font/advent_pro_medium"
+        android:text="Configurações"
+        android:textColor="#ea1d2c"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="35dp"
+        android:fontFamily="@font/advent_pro_medium"
+        android:text="Nome completo"
+        android:textColor="#3A3939"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/cpNomeCompleto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Insira o seu nome completo"
+        android:inputType="textPersonName"
+        android:textColorHint="#302E2E"
+        android:textColor="#302E2E"
+        android:background="@drawable/forget"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="15dp"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/advent_pro_medium"
+        android:text="Endereço Completo"
+        android:textColor="#3A3939"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/cpEnderecoCompleto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ex: Rua do limoeiro 820 centro"
+        android:inputType="textAutoCorrect"
+        android:textColorHint="#302E2E"
+        android:textColor="#302E2E"
+        android:background="@drawable/forget"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="10dp"
+        />
+
+
+    <Button
+        android:id="@+id/botaoConcluirCriacao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#ea1d2c"
+        android:onClick="validarDadosCliente"
+        android:text="Concluído"
+        android:fontFamily="@font/advent_pro_medium"
+        android:textSize="25dp"
+        android:textColor="#fff"
+        />
+
 
 </LinearLayout>
