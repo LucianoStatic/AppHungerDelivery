@@ -1,0 +1,16 @@
+<resources>
+
+    <style name="Widget.Theme.HungerDelivery.ActionBar.Fullscreen" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+
+    </style>
+
+    <style name="Widget.Theme.HungerDelivery.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+
+    </style>
+    <style name="TemaBranco" parent="Widget.AppCompat.ActionBar">
+        <item name="android:textColorSecondary">@color/white</item>
+    </style>
+</resources>

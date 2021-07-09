@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="100dp">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imagemPerfilPizzaria"
+            android:layout_width="60dp"
+            android:layout_margin="5dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_loja"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtNomePizzaria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="93dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="199dp"
+            android:layout_marginBottom="58dp"
+            android:text="Pizzaria Itália"
+            android:textColor="#444444"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtCategoria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="94dp"
+            android:layout_marginTop="43dp"
+            android:layout_marginEnd="264dp"
+            android:layout_marginBottom="37dp"
+            android:text="Pizzaria"
+            android:textColor="#A69F9F"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtTempoEntrega"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="93dp"
+            android:layout_marginTop="65dp"
+            android:layout_marginEnd="229dp"
+            android:layout_marginBottom="15dp"
+            android:drawableLeft="@drawable/ic_baseline_timer_18"
+            android:drawablePadding="4dp"
+            android:text="38-48 min"
+            android:textColor="#A69F9F"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtValorcorrida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="199dp"
+            android:layout_marginTop="66dp"
+            android:layout_marginEnd="156dp"
+            android:layout_marginBottom="15dp"
+            android:drawableLeft="@drawable/ic_bike18"
+            android:drawablePadding="3dp"
+            android:text="10,00"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtStatusab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="293dp"
+            android:layout_marginTop="65dp"
+            android:layout_marginEnd="64dp"
+            android:layout_marginBottom="16dp"
+            android:text="Fechado"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtIconeab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="360dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="27dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/ic_aberto24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </RelativeLayout>
+
+
+
+
+    <include
+        layout="@layout/divisor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
+
+
+
+
+
+

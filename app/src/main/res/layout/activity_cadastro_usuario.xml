@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFEFE"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#302E2E"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/delivery2"
+            android:fontFamily="@font/bangers"
+            android:gravity="center"
+            android:text="Hunger Delivery!"
+
+            android:textColor="#ea1d2c"
+            android:textSize="40dp" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="162dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="45dp"
+        android:fontFamily="@font/advent_pro_medium"
+        android:text="Inscreva-se"
+        android:textColor="#ea1d2c"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="35dp"
+        android:fontFamily="@font/advent_pro_medium"
+        android:text="Nome completo"
+        android:textColor="#3A3939"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/campoCadastroNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Insira o seu nome completo"
+        android:inputType="textPersonName"
+        android:textColorHint="#302E2E"
+        android:textColor="#302E2E"
+        android:background="@drawable/forget"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="15dp"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/advent_pro_medium"
+        android:text="Email"
+        android:textColor="#3A3939"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/campoCadastroEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite um email válido"
+        android:inputType="textEmailAddress"
+        android:textColorHint="#302E2E"
+        android:textColor="#302E2E"
+        android:background="@drawable/forget"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="10dp"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/advent_pro_medium"
+        android:text="Senha"
+        android:textColor="#454343"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/campoCadastroSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+       android:hint="Crie uma senha de até 8 digitos"
+        android:textColor="#302E2E"
+        android:textColorHint="#302E2E"
+        android:background="@drawable/forget"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="10dp"
+        />
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="30dp"
+       android:layout_marginTop="20dp"
+       android:gravity="center_horizontal"
+       android:orientation="horizontal">
+
+       <TextView
+           android:layout_width="60dp"
+           android:layout_height="wrap_content"
+           android:layout_marginRight="10dp"
+           android:fontFamily="@font/advent_pro_medium"
+           android:gravity="center"
+           android:text="Cliente"
+           android:textColor="#ea1d2c"
+           android:textSize="18dp" />
+
+       <Switch
+           android:id="@+id/switchCadastro"
+           android:layout_width="50dp"
+           android:layout_height="30dp"
+           android:layout_marginRight="20dp"
+           android:gravity="center"
+
+           />
+
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:fontFamily="@font/advent_pro_medium"
+           android:text="Empresa"
+           android:textColor="#ea1d2c"
+
+
+           android:textSize="18dp" />
+
+   </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/botaoFinalizarCriacao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#ea1d2c"
+        android:onClick="metodoSalvarCadastroUsuario"
+        android:text="Inscreva-se"
+        android:fontFamily="@font/advent_pro_medium"
+        android:textSize="25dp"
+        android:textColor="#fff"
+       />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/advent_pro_medium"
+        android:text="Já possui uma conta? Faça o Login"
+        android:textColor="#ea1d2c"
+        android:textSize="19dp" />
+
+
+</LinearLayout>
+
+</ScrollView>

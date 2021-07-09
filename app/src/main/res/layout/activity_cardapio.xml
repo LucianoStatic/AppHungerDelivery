@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Cardapio">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/bckmadeira"
+        android:layout_height="150dp">
+
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:layout_marginStart="16dp"
+
+            android:src="@drawable/buger"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/nomeEmpresaCardapio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/advent_pro_medium"
+            android:text="Lanchonete King"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="81dp"
+            android:layout_height="17dp"
+            android:layout_marginStart="108dp"
+            android:layout_marginTop="6dp"
+            android:src="@drawable/estrelas"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.037"
+            app:layout_constraintStart_toStartOf="@+id/circleImageView"
+            app:layout_constraintTop_toBottomOf="@+id/categoriaEmpresaCardapio" />
+
+        <TextView
+            android:id="@+id/categoriaEmpresaCardapio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:text="Lanchonete"
+            android:textColor="#F1E7E7"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.384"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/horarioEmpresaCardapio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:drawableLeft="@drawable/ic_r18"
+            android:drawablePadding="3dp"
+            android:text="70-85min"
+            android:textColor="#ECE8E8"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.381"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.ogaclejapan.smarttablayout.SmartTabLayout
+        android:id="@+id/viewPagerTab"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#ea1d2c"
+
+        app:stl_defaultTabBackground="?attr/selectableItemBackground"
+        app:stl_defaultTabTextAllCaps="true"
+        app:stl_defaultTabTextColor="#FFFF"
+        app:stl_defaultTabTextSize="16sp"
+
+        app:stl_dividerColor="#FFFF"
+        app:stl_dividerThickness="1dp"
+
+        app:stl_indicatorAlwaysInCenter="false"
+        app:stl_indicatorWithoutPadding="false"
+        app:stl_indicatorInFront="false"
+        app:stl_indicatorInterpolation="smart"
+
+        app:stl_indicatorGravity="bottom"
+        app:stl_indicatorColor="#FFFF"
+        app:stl_indicatorThickness="4dp"
+        app:stl_indicatorWidth="auto"
+        app:stl_indicatorCornerRadius="2dp"
+
+        app:stl_overlineColor="#4D000000"
+        app:stl_overlineThickness="0dp"
+        app:stl_underlineColor="#4D000000"
+        app:stl_underlineThickness="1dp"
+
+
+        app:stl_defaultTabTextHorizontalPadding="30dp"
+        app:stl_defaultTabTextMinWidth="0dp"
+        app:stl_distributeEvenly="false"
+        app:stl_clickable="true"
+        app:stl_titleOffset="24dp"
+        app:stl_drawDecorationAfterTab="false"
+
+        />
+
+
+
+
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/viewPagerTab"
+        />
+
+
+
+</LinearLayout>

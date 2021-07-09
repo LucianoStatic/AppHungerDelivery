@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F4EAEA"
+        android:orientation="vertical"
+        tools:context=".ProdutoEmpresa">
+
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/fundofood"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imagemConfProduto"
+                android:layout_width="137dp"
+                android:layout_height="153dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/buger"
+                app:civ_border_width="4dp"
+                app:civ_border_color="#EAEAEA"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/advent_pro_medium"
+                android:text="Adicionar/Alterar Imagem"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="35dp"
+                android:fontFamily="@font/advent_pro_medium"
+                android:text="Nome produto"
+                android:textColor="#3A3939"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/campoCadNomeProduto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="35dp"
+                android:background="@drawable/forget"
+                android:drawableLeft="@drawable/ic_baseline_fastfood_24"
+                android:drawablePadding="5dp"
+                android:hint="Insira o nome do produto"
+                android:inputType="textPersonName"
+                android:textColor="#302E2E"
+                android:textColorHint="#302E2E" />
+
+
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/advent_pro_medium"
+            android:text="Descrição produto"
+            android:textColor="#3A3939"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/campoDescProduto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="35dp"
+                android:background="@drawable/forget"
+                android:drawableLeft="@drawable/ic_baseline_description_24"
+                android:drawablePadding="5dp"
+                android:hint="Insira uma descrição ao produto"
+                android:inputType="textPersonName"
+                android:textColor="#302E2E"
+                android:textColorHint="#302E2E" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/advent_pro_medium"
+                android:text="Valor produto"
+                android:textColor="#3A3939"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/campoValorProduto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="35dp"
+                android:background="@drawable/forget"
+                android:drawableLeft="@drawable/ic_dinheiro"
+                android:drawablePadding="5dp"
+                android:hint="Insira um valor para o produto"
+                android:inputType="numberDecimal"
+                android:textColor="#302E2E"
+                android:textColorHint="#302E2E" />
+            <Button
+                android:id="@+id/botaoFinalizarCadProduto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="#ea1d2c"
+                android:text="Concluir"
+                android:fontFamily="@font/advent_pro_medium"
+                android:textSize="25dp"
+                android:onClick="validarDadosProdutos"
+                android:textColor="#fff"
+                />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</ScrollView>

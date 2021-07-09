@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "555649776394",
+    "project_id": "hungerdelivery-7824d",
+    "storage_bucket": "hungerdelivery-7824d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:555649776394:android:8dfe29e4474e46888c98f3",
+        "android_client_info": {
+          "package_name": "br.com.app.hungerdelivery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "555649776394-lhc71kqfi1k2u412hnl15h6d0bl75n4i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.app.hungerdelivery",
+            "certificate_hash": "284ea4242437c4370720bd59b6ef2c8f8380032a"
+          }
+        },
+        {
+          "client_id": "555649776394-22lgj64uik4e1qikie0paodl5j11bjot.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8w7b5PTZrkLbPMJsVjLHLar5ZSOOYpq4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "555649776394-22lgj64uik4e1qikie0paodl5j11bjot.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/</item>
+        <item>@font/advent_pro_medium</item>
+        <item>@font/alef</item>
+        <item>@font/alef_bold</item>
+        <item>@font/amita_bold</item>
+        <item>@font/audiowide</item>
+        <item>@font/baloo</item>
+        <item>@font/bangers</item>
+        <item>@font/baumans</item>
+        <item>@font/black_ops_one</item>
+        <item>@font/bungee</item>
+        <item>@font/bungee_inline</item>
+        <item>@font/chelsea_market</item>
+        <item>@font/didact_gothic</item>
+        <item>@font/faster_one</item>
+        <item>@font/galindo</item>
+        <item>@font/gloria_hallelujah</item>
+        <item>@font/julius_sans_one</item>
+    </array>
+</resources>
