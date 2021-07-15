@@ -7,6 +7,12 @@
         android:icon="@drawable/ic_add"
         android:title="Novo Produto"
         app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menuComanda"
+        android:icon="@drawable/ic_comanda"
+        android:title="Pedidos"
+        app:showAsAction="always" />
     <item
         android:id="@+id/menuConfiguracoes"
         android:icon="@drawable/ic_settings"

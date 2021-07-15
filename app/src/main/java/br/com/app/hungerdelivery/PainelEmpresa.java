@@ -280,6 +280,9 @@ public class PainelEmpresa extends AppCompatActivity {
             case R.id.menuNovoProduto:
                 abrirNovoProduto();
                 break;
+            case R.id.menuComanda:
+                abrirComanda();
+                break;
 
 
         }
@@ -320,6 +323,16 @@ public class PainelEmpresa extends AppCompatActivity {
     private void abrirNovoProduto() {
 
         startActivity(new Intent(PainelEmpresa.this, ProdutoEmpresa.class));
+
+    }
+
+
+    /**
+     * METODO ABRIR PAINEL DAS COMANDAS
+     */
+    private void abrirComanda() {
+
+        startActivity(new Intent(PainelEmpresa.this, Entregas.class));
 
     }
 

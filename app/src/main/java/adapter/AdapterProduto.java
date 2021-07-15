@@ -59,9 +59,9 @@ public class AdapterProduto extends RecyclerView.Adapter<AdapterProduto.MyViewHo
         public MyViewHolder(View itemView) {
             super(itemView);
 
-            nome = itemView.findViewById(R.id.textNomeRefeicao);
-            descricao = itemView.findViewById(R.id.textDescricaoRefeicao);
-            valor = itemView.findViewById(R.id.textPreco);
+            nome = itemView.findViewById(R.id.textNomeEntregador);
+            descricao = itemView.findViewById(R.id.textEmailEntregador);
+            valor = itemView.findViewById(R.id.textSenhaEntregador);
         }
     }
 }

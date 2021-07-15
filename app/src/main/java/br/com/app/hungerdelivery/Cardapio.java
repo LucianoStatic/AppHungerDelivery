@@ -10,10 +10,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.Button;
@@ -36,11 +40,14 @@ import java.util.List;
 
 import adapter.AdapterEmpresa;
 import adapter.AdapterProduto;
+import dmax.dialog.SpotsDialog;
 import fragment.PedidosFragment;
 import fragment.ProdutosFragment;
 import fragment.PromocoesFragment;
 import fragment.SobreFragment;
 import helper.ConfiguracaoFirebase;
+import helper.UsuarioFirebase;
+import model.Clientes;
 import model.Empresa;
 import model.Produtos;
 
@@ -121,14 +128,11 @@ public class Cardapio extends AppCompatActivity {
 
 
         //TODO: CONFIGURAR O RECICLER-VIEW
-
+        //recuperarDadosUsuario();
 
     }
 
 
-    /**
-     * Metodo pra recuperar os dados dos Produtos no cardapio
-     */
     private void recuperarDadosCardapio() {
 
         DatabaseReference produtosRef = firebaseRef

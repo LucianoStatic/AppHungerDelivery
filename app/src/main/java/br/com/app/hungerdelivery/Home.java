@@ -297,7 +297,7 @@ public class Home extends AppCompatActivity {
      */
     private void abrirConfiguracoesUsuario() {
 
-        startActivity(new Intent(Home.this, ConfiguracaoUsuario.class));
+        startActivity(new Intent(Home.this, Entregas.class));
     }
 
 

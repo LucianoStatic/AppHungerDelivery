@@ -95,59 +95,12 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#EFE6E6">
-
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="7dp"
-            android:layout_marginBottom="9dp"
-            android:drawableLeft="@drawable/ic_baseline_shopping_cart_24"
-            android:text="Carrinho"
-            android:textColor="#ea1d2c"
-            android:textSize="18dp"
-            android:textStyle="normal" />
-
-        <TextView
-            android:id="@+id/txtCarrinhoQuantidade"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="173dp"
-            android:layout_marginBottom="11dp"
-            android:drawableLeft="@drawable/ic_baseline_loupe_24"
-            android:text="Quantidade:"
-            android:textColor="#ea1d2c"
-            android:textSize="18dp" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="33dp"
-            android:layout_marginBottom="12dp"
-            android:drawableLeft="@drawable/ic_baseline_attach_money_24"
-            android:text="Valor Total:"
-            android:textColor="#ea1d2c"
-            android:textSize="18sp" />
-    </RelativeLayout>
-
 
     <com.ogaclejapan.smarttablayout.SmartTabLayout
         android:id="@+id/viewPagerTab"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:background="#ea1d2c"
+        android:background="#ff1727"
 
         app:stl_defaultTabBackground="?attr/selectableItemBackground"
         app:stl_defaultTabTextAllCaps="true"

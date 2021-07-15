@@ -74,7 +74,7 @@ public class UsuarioFirebase {
          */
         FirebaseUser user = pegarUsuarioAtual();
 
-        if(user != null){
+        if (user != null) {
 
             DatabaseReference usuarioRef = ConfiguracaoFirebase.metodoReferenciaGetFirebase()
                     .child("usuarios")
@@ -82,7 +82,6 @@ public class UsuarioFirebase {
             usuarioRef.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
-
 
 
                     Usuarios usuarios = snapshot.getValue(Usuarios.class);
@@ -93,7 +92,11 @@ public class UsuarioFirebase {
 
                         activity.startActivity(new Intent(activity, PainelEmpresa.class)); //ABRINDO TELA PAINEL
 
-                    } else {
+                    } else if (recuperarTipoUsuario.equals("Cliente")) {
+
+                        activity.startActivity(new Intent(activity, Home.class));
+
+                    } else if (recuperarTipoUsuario.equals("Entregador")) {
 
                         activity.startActivity(new Intent(activity, CategoriaComercios.class));
                     }
@@ -104,14 +107,12 @@ public class UsuarioFirebase {
                 @Override
                 public void onCancelled(@NonNull DatabaseError error) {
 
+
                 }
             });
 
 
-
         }
-
-
 
 
     }

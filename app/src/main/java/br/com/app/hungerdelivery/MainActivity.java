@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText campoLoginEmail, campoLoginSenha;
     public String emailLogin, senhaLogin;
     private AlertDialog caixaDialogo;
-    private TextView abrirJanelaCadastro;
+    private Button abrirJanelaCadastro;
     /**
      * CRIAR INSTANCIA DO FIREBASE DE AUTENTICACAO
      */
@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
         campoLoginEmail = findViewById(R.id.campoLoginEmail);
         campoLoginSenha = findViewById(R.id.campoLoginSenha);
         botaoFazerLogin = findViewById(R.id.botaoLogin);
-        abrirJanelaCadastro = findViewById(R.id.botaoCriarConta);
+        abrirJanelaCadastro = findViewById(R.id.botaoCriarCont);
 
     }
 
@@ -144,6 +144,14 @@ public class MainActivity extends AppCompatActivity {
     public void metodoAbrirTelaCadastro(View view) {
 
         startActivity(new Intent(getApplicationContext(), CadastroUsuario.class));
+
+    }
+
+
+    public void metodoAbrirTelaCadastroEntregador(View view){
+
+
+        startActivity(new Intent(getApplicationContext(), CadastroEntregador.class));
 
     }
 

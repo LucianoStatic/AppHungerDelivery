@@ -1,13 +1,84 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context="fragment.ProdutosFragment">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        android:background="#FFFFFF">
+
+
+        <TextView
+            android:id="@+id/txtCarrinhoQuantidade"
+            android:layout_width="146dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="262dp"
+            android:layout_marginBottom="13dp"
+            android:drawablePadding="3dp"
+            android:drawableLeft="@drawable/ic_round_shopping_basket_24"
+            android:text="Quantidade: 0"
+            android:textColor="#ea1d2c"
+            android:textStyle="bold"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/txPedidoValorTotal"
+            android:layout_width="187dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="12dp"
+            android:drawableLeft="@drawable/ic_baseline_monetization_on_24"
+            android:text="Valor Total: 0"
+            android:textColor="#ea1d2c"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <include
+            layout="@layout/divisor"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginTop="46dp" />
+
+    </RelativeLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/reciclerCardapioProdutos"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="10dp"/>
-</FrameLayout>
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.tuann.floatingactionbuttonexpandable.FloatingActionButtonExpandable
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+            android:layout_margin="20dp"
+        app:fab_bg_color="#0DAA13"
+        app:fab_content="Confirmar Pedido"
+        app:fab_icon="@drawable/ic_baseline_check_24"
+        app:fab_duration="200"/>
+
+
+
+
+</RelativeLayout>

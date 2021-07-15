@@ -8,7 +8,7 @@
 
 
     <TextView
-        android:id="@+id/textNomeRefeicao"
+        android:id="@+id/textNomeEntregador"
         android:layout_width="213dp"
         android:layout_height="33dp"
         android:layout_marginBottom="8dp"
@@ -20,7 +20,7 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/textDescricaoRefeicao"
+        android:id="@+id/textEmailEntregador"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -30,11 +30,11 @@
         android:textSize="17sp" />
 
     <TextView
-        android:id="@+id/textPreco"
+        android:id="@+id/textSenhaEntregador"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="R$ 19.90"
-        android:textColor="#73c501"
+        android:textColor="#0DAA13"
         android:textSize="18sp"
         android:textStyle="bold" />
 

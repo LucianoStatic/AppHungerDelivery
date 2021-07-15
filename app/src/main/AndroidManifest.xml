@@ -14,10 +14,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HungerDelivery"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Cardapio"
-            android:parentActivityName=".CategoriaPizzaria"></activity>
-        <activity android:name=".CategoriaPizzaria"
-            android:parentActivityName=".CategoriaComercios"/>
+        <activity android:name=".CadastroEntregador"></activity>
+        <activity android:name=".Entregas" />
+        <activity android:name=".ComandaPedidos" />
+        <activity
+            android:name=".Cardapio"
+            android:parentActivityName=".CategoriaPizzaria" />
+        <activity
+            android:name=".CategoriaPizzaria"
+            android:parentActivityName=".CategoriaComercios" />
         <activity
             android:name=".ConfiguracaoUsuario"
             android:parentActivityName=".Home" />

@@ -197,7 +197,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
-        android:backgroundTint="#ea1d2c"
+        android:backgroundTint="#ff1727"
          android:text="Concluir"
         android:fontFamily="@font/advent_pro_medium"
         android:textSize="25dp"

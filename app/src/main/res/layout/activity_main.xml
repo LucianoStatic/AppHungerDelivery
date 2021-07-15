@@ -30,11 +30,13 @@
             android:gravity="center"
             android:text="Hunger Delivery!"
 
-            android:textColor="#ea1d2c"
+            android:textColor="#ff1727"
             android:textSize="40dp" />
 
 
     </LinearLayout>
+
+
 
 
     <TextView
@@ -45,7 +47,7 @@
         android:fontFamily="@font/advent_pro_medium"
 
         android:text="Login"
-        android:textColor="#ea1d2c"
+        android:textColor="#ff1727"
         android:textSize="35dp"
         android:textStyle="bold" />
 
@@ -101,15 +103,17 @@
         />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/botaoEsqueceuSenha"
+        android:layout_width="191dp"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
         android:layout_marginTop="20dp"
-        android:layout_marginRight="35dp"
+        android:backgroundTint="#ff1727"
         android:fontFamily="@font/advent_pro_medium"
+
         android:text="Esqueceu a senha?"
-        android:textColor="#ea1d2c"
-        android:textSize="19dp" />
+        android:textColor="#ff1727"
+        android:textSize="20dp" />
 
     <Button
         android:id="@+id/botaoLogin"
@@ -118,23 +122,39 @@
         android:onClick="metodoConfirmarLogin"
         android:layout_marginTop="30dp"
         android:layout_gravity="center"
-        android:backgroundTint="#ea1d2c"
+        android:backgroundTint="#1B1A1A"
         android:text="Login"
         android:fontFamily="@font/advent_pro_medium"
         android:textSize="25dp"
         android:textColor="#fff"
          />
+    <Button
+        android:id="@+id/botaoCriarCont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="metodoAbrirTelaCadastro"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:backgroundTint="#ff1727"
+        android:text="Criar uma conta"
+        android:fontFamily="@font/advent_pro_medium"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        />
 
     <TextView
-        android:id="@+id/botaoCriarConta"
+        android:id="@+id/botaoAbrirEntregador"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
+        android:textStyle="bold"
         android:fontFamily="@font/advent_pro_medium"
-        android:onClick="metodoAbrirTelaCadastro"
-        android:text="Não tem uma conta? Inscreva-se"
-        android:textColor="#ea1d2c"
+        android:onClick="metodoAbrirTelaCadastroEntregador"
+        android:text="Seja um entregador"
+        android:textColor="#ff1727"
+        android:drawablePadding="5dp"
+        android:drawableLeft="@drawable/ic_entregador"
         android:textSize="20dp" />
 
 

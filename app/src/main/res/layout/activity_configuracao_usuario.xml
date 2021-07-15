@@ -25,7 +25,7 @@
         android:layout_marginTop="45dp"
         android:fontFamily="@font/advent_pro_medium"
         android:text="Configurações"
-        android:textColor="#ea1d2c"
+        android:textColor="#ff1727"
         android:textSize="35dp"
         android:textStyle="bold" />
 
@@ -87,7 +87,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
-        android:backgroundTint="#ea1d2c"
+        android:backgroundTint="#ff1727"
         android:onClick="validarDadosCliente"
         android:text="Concluído"
         android:fontFamily="@font/advent_pro_medium"

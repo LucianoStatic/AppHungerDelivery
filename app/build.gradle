@@ -51,6 +51,11 @@ dependencies {
     implementation 'com.ogaclejapan.smarttablayout:library:2.0.0@aar'
     //Optional: see how to use the utility.
     implementation 'com.ogaclejapan.smarttablayout:utils-v4:2.0.0@aar'
+    implementation 'com.github.d-max:spots-dialog:1.1@aar'
+    implementation 'com.github.imtuann:FloatingActionButtonExpandable:1.1.2'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.github.Shashank02051997:FancyGifDialog-Android:1.4'
+
 
 }
 apply plugin: 'com.google.gms.google-services'
