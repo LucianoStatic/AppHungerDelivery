@@ -332,7 +332,7 @@ public class PainelEmpresa extends AppCompatActivity {
      */
     private void abrirComanda() {
 
-        startActivity(new Intent(PainelEmpresa.this, Entregas.class));
+        startActivity(new Intent(PainelEmpresa.this, ComandaPedidos.class));
 
     }
 

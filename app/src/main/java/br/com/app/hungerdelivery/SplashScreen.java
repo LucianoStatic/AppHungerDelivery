@@ -18,8 +18,8 @@ public class SplashScreen extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    sleep(8000);
-                    Intent i = new Intent(SplashScreen.this,MainActivity.class);
+                    sleep(5000);
+                    Intent i = new Intent(SplashScreen.this,TelaInicial.class);
                     startActivity(i);
                 } catch (InterruptedException e) {
                     e.printStackTrace();

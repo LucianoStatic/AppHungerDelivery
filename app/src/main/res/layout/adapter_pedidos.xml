@@ -1,50 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
-
+    <TextView
+        android:id="@+id/textPedidoEnvEmpresa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="3dp"
+        android:drawableLeft="@drawable/ic_restaurante"
+        android:text="China in Box"
+        android:textColor="#F30D5B"
+        android:textStyle="bold"
+        android:textSize="18sp" />
     <TextView
         android:id="@+id/textPedidoNome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="4dp"
+        android:drawableLeft="@drawable/ic_pessoa"
         android:text="Jamilton damasceno"
-        android:textColor="@color/common_google_signin_btn_text_dark_focused"
-        android:textSize="16sp"
+        android:textColor="#444544"
+        android:textSize="15sp"
         android:textStyle="bold" />
+
+
 
     <TextView
         android:id="@+id/textPedidoEndereco"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#444544"
+        android:drawableLeft="@drawable/ic_local"
         android:text="Endereço: rua almeida prado, 1300"
-        android:textSize="14sp" />
+        android:textSize="15sp" />
 
     <TextView
         android:id="@+id/textPedidoPgto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_peddinheiro"
         android:text="Pgto: Dinheiro"
-        android:textSize="14sp" />
+        android:textColor="#444544"
+        android:textSize="15sp" />
 
     <TextView
         android:id="@+id/textPedidoObs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
+        android:drawablePadding="3dp"
         android:text="Obs: teste"
-        android:textSize="14sp" />
+        android:textColor="#444544"
+        android:drawableLeft="@drawable/ic_observacao"
+        android:textSize="15sp" />
 
     <TextView
         android:id="@+id/textPedidoItens"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_pedido"
+        android:drawablePadding="3dp"
         android:text="1) Filé Cinco Queijos (1 X R$ 16.50)"
         android:textColor="@color/purple_200"
         android:textSize="16sp"
         android:textStyle="bold" />
 
-    <include layout="@layout/divisor" />
+    <include layout="@layout/divisor"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"/>
 
 </LinearLayout>

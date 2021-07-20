@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HungerDelivery"
         android:usesCleartextTraffic="true">
-        <activity android:name=".CadastroEntregador"></activity>
+        <activity android:name=".TelaInicial"></activity>
+        <activity android:name=".CadastroEntregador" />
         <activity android:name=".Entregas" />
         <activity android:name=".ComandaPedidos" />
         <activity

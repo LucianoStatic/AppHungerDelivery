@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
         campoLoginEmail = findViewById(R.id.campoLoginEmail);
         campoLoginSenha = findViewById(R.id.campoLoginSenha);
         botaoFazerLogin = findViewById(R.id.botaoLogin);
-        abrirJanelaCadastro = findViewById(R.id.botaoCriarCont);
+
 
     }
 

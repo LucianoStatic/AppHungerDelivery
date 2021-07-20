@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.app.hungerdelivery.R;
+import model.Empresa;
 import model.ItensPedido;
 import model.Pedido;
 
@@ -23,7 +24,7 @@ import model.Pedido;
 public class AdapterPedido extends RecyclerView.Adapter<AdapterPedido.MyViewHolder> {
 
     private List<Pedido> pedidos;
-
+    private Empresa  empresa = new Empresa();
     public AdapterPedido(List<Pedido> pedidos) {
         this.pedidos = pedidos;
     }
@@ -39,7 +40,9 @@ public class AdapterPedido extends RecyclerView.Adapter<AdapterPedido.MyViewHold
     public void onBindViewHolder(@NonNull MyViewHolder holder, int i) {
 
         Pedido pedido = pedidos.get(i);
+
         holder.nome.setText(pedido.getNome());
+        holder.comercios.setText("Empresa: "+ pedido.getNomeComercio());
         holder.endereco.setText("Endereço: " + pedido.getEndereco());
         holder.observacao.setText("Obs: " + pedido.getObservacao());
 
@@ -56,7 +59,7 @@ public class AdapterPedido extends RecyclerView.Adapter<AdapterPedido.MyViewHold
             total += (qtde * preco);
 
             String nome = itemPedido.getNomeProduto();
-            descricaoItens += numeroItem + ") " + nome + " / (" + qtde + " x R$ " + preco + ") \n";
+            descricaoItens += numeroItem + "- " + nome + " - " + qtde + " x R$ " + preco + "  \n";
             numeroItem++;
         }
         descricaoItens += "Total: R$ " + total;
@@ -64,7 +67,7 @@ public class AdapterPedido extends RecyclerView.Adapter<AdapterPedido.MyViewHold
 
         int metodoPagamento = pedido.getMetodoPagamento();
         String pagamento = metodoPagamento == 0 ? "Dinheiro" : "Máquina cartão";
-        holder.pgto.setText("pgto: " + pagamento);
+        holder.pgto.setText("Pagamento: " + pagamento.toString());
 
     }
 
@@ -80,6 +83,7 @@ public class AdapterPedido extends RecyclerView.Adapter<AdapterPedido.MyViewHold
         TextView pgto;
         TextView observacao;
         TextView itens;
+        TextView comercios;
 
         public MyViewHolder(View itemView) {
             super(itemView);
@@ -89,6 +93,7 @@ public class AdapterPedido extends RecyclerView.Adapter<AdapterPedido.MyViewHold
             pgto = itemView.findViewById(R.id.textPedidoPgto);
             observacao = itemView.findViewById(R.id.textPedidoObs);
             itens = itemView.findViewById(R.id.textPedidoItens);
+            comercios = itemView.findViewById(R.id.textPedidoEnvEmpresa);
         }
     }
 

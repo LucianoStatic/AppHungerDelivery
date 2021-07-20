@@ -6,158 +6,132 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#FFFEFE"
-    tools:context=".MainActivity">
 
-    <LinearLayout
-
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:orientation="vertical"
-        android:background="#302E2E">
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/fundoempresa"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/xmbackgroundlogin"/>
 
         <TextView
+            android:id="@+id/recuperarSenha"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:drawableLeft="@drawable/delivery2"
-            android:fontFamily="@font/bangers"
-            android:gravity="center"
-            android:text="Hunger Delivery!"
+            android:layout_marginBottom="52dp"
 
-            android:textColor="#ff1727"
-            android:textSize="40dp" />
+            android:drawableLeft="@drawable/ic_entregador"
+            android:text="Seja um entregador"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:onClick="metodoAbrirTelaCadastroEntregador"
+            android:drawablePadding="3dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-
-    </LinearLayout>
-
-
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="35dp"
-        android:layout_marginTop="45dp"
-        android:fontFamily="@font/advent_pro_medium"
-
-        android:text="Login"
-        android:textColor="#ff1727"
-        android:textSize="35dp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="35dp"
-        android:layout_marginTop="35dp"
-        android:fontFamily="@font/advent_pro_medium"
-        android:text="Email"
-        android:textColor="#454343"
-        android:textSize="18dp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/campoLoginEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Insira um Email"
-        android:inputType="textEmailAddress"
-        android:textColor="#302E2E"
-        android:textColorHint="#302E2E"
-        android:background="@drawable/forget"
-        android:layout_marginLeft="35dp"
-        android:layout_marginRight="35dp"
-        android:layout_marginTop="10dp"
-        />
+        <Button
+            android:id="@+id/botaoLogin"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/background_sign_up"
+            android:text="Entrar"
+            android:onClick="metodoConfirmarLogin"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/recuperarSenha"
+            />
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/advent_pro_medium"
-        android:text="Senha"
-        android:textColor="#454343"
-        android:textSize="18dp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/campoLoginSenha"
-        android:inputType="textPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Insira uma Senha"
-        android:textColor="#302E2E"
-        android:textColorHint="#302E2E"
-        android:background="@drawable/forget"
-        android:layout_marginLeft="35dp"
-        android:layout_marginRight="35dp"
-        android:layout_marginTop="10dp"
-        />
-
-    <TextView
-        android:id="@+id/botaoEsqueceuSenha"
-        android:layout_width="191dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="#ff1727"
-        android:fontFamily="@font/advent_pro_medium"
-
-        android:text="Esqueceu a senha?"
-        android:textColor="#ff1727"
-        android:textSize="20dp" />
-
-    <Button
-        android:id="@+id/botaoLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="metodoConfirmarLogin"
-        android:layout_marginTop="30dp"
-        android:layout_gravity="center"
-        android:backgroundTint="#1B1A1A"
-        android:text="Login"
-        android:fontFamily="@font/advent_pro_medium"
-        android:textSize="25dp"
-        android:textColor="#fff"
-         />
-    <Button
-        android:id="@+id/botaoCriarCont"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="metodoAbrirTelaCadastro"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center"
-        android:backgroundTint="#ff1727"
-        android:text="Criar uma conta"
-        android:fontFamily="@font/advent_pro_medium"
-        android:textSize="20dp"
-        android:textColor="#fff"
-        />
-
-    <TextView
-        android:id="@+id/botaoAbrirEntregador"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:textStyle="bold"
-        android:fontFamily="@font/advent_pro_medium"
-        android:onClick="metodoAbrirTelaCadastroEntregador"
-        android:text="Seja um entregador"
-        android:textColor="#ff1727"
-        android:drawablePadding="5dp"
-        android:drawableLeft="@drawable/ic_entregador"
-        android:textSize="20dp" />
+        <EditText
+            android:id="@+id/campoLoginSenha"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/caixatextooval"
+            android:hint="Digite a sua senha"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textColor="@color/white"
+            android:textColorHint="#ECECEC"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@id/botaoLogin"
+            />
 
 
-</LinearLayout>
+        <EditText
+            android:id="@+id/campoLoginEmail"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/caixatextooval"
+            android:hint="Insira um email"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@id/campoLoginSenha"
+            />
+
+
+        <TextView
+            android:id="@+id/mensagemLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="42dp"
+            android:layout_marginEnd="42dp"
+            android:layout_marginBottom="20dp"
+            android:text="Faça o login com a sua conta"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/campoLoginEmail"/>
+
+        <TextView
+            android:id="@+id/textBemVindos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="42dp"
+            android:layout_marginEnd="42dp"
+            android:layout_marginBottom="10dp"
+            android:text="Bem vindo(a)"
+
+            android:textColor="@color/white"
+            android:textSize="38sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/mensagemLogin"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
 
 </ScrollView>

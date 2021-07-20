@@ -29,6 +29,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.shashank.sony.fancygifdialoglib.FancyGifDialog;
 import com.shashank.sony.fancygifdialoglib.FancyGifDialogListener;
@@ -62,6 +63,7 @@ public class ProdutosFragment extends Fragment {
     private TextView textoFrame;
 
     private RecyclerView recyclerProdutosCardapio;
+    private RecyclerView recyclerBebidasCardapio;
     private ImageView imageEmpresaCardapio;
     private TextView txtQuantidadeProduto, txtValorTotalProduto;
 
@@ -117,6 +119,7 @@ public class ProdutosFragment extends Fragment {
 
         //TODO: Inicializando componentes
         recyclerProdutosCardapio = view.findViewById(R.id.reciclerCardapioProdutos);
+
         imageEmpresaCardapio = view.findViewById(R.id.circleImageView);
         fb = view.findViewById(R.id.fab);
         txtQuantidadeProduto = view.findViewById(R.id.txtCarrinhoQuantidade);
@@ -136,6 +139,7 @@ public class ProdutosFragment extends Fragment {
         recyclerProdutosCardapio.setLayoutManager(layoutManager);
         recyclerProdutosCardapio.setHasFixedSize(true);
         recyclerProdutosCardapio.setAdapter(adapterProduto);
+
 
 
         //TODO: CONFIGURAR O EVENTO DE CLIQUE DO RECICLER VIEW
@@ -195,6 +199,38 @@ public class ProdutosFragment extends Fragment {
     }
 
 
+
+    //TODO: Metodo para listar as bebidas
+    public void metodoListarBebidas(){
+
+
+        //TODO: Metodo de consulta la no banco de dados firebase
+        DatabaseReference pedidoRef = firebaseRef
+                .child("produtos")
+                .child(idEmpresaLog);
+
+        //TODO: Metodo pra fazer pesquisa personalizada com uma QUERY
+        Query pedidoPesquisa = pedidoRef.orderByChild("categoria")
+                .equalTo("bebidas");
+
+        pedidoPesquisa.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                Log.i("TENTANDOOOO","BORAAAAA FUNCAOOOOO TA ACHANO AS BEBIDAS ");
+
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+    }
+
+
     //TODO: Metodo Listar Cardapio dos Produtos
     public void metodoListarCardapioProdutos() {
 
@@ -227,6 +263,41 @@ public class ProdutosFragment extends Fragment {
     }
 
 
+    //TODO: Metodo Listar Cardapio dos Produtos
+    public void metodoListarBeer() {
+
+
+        //TODO AQUI E ONDE ESTA O  METODO PRA BUSCAR
+        DatabaseReference produtosRef = firebaseRef
+                .child("produtos")
+                .child(idEmpresaLog);
+
+        //TODO: Metodo pra fazer pesquisa personalizada com uma QUERY
+        Query pedidoPesquisa = produtosRef.orderByChild("categoria")
+                .equalTo("bebidas");
+        produtosRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                listaProdutos.clear();
+                for (DataSnapshot ds : snapshot.getChildren()) { //usando um for pra percorrer a lista de produtos no banco de dados
+
+                    listaProdutos.add(ds.getValue(Produtos.class));
+
+                    //apos ter encontrado todos os dados encerra
+                }
+                adapterProduto.notifyDataSetChanged(); //NOTIFICA O ADAPTER
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+    }
+
     //TODO: Metodo Confirmar quantidade de items
     private void confirmarQuantidade(int posicao) {
 
@@ -250,6 +321,7 @@ public class ProdutosFragment extends Fragment {
                 //TODO: Recuperar os dados de um produto quando vc seleciona ele, via position
                 Produtos produtoSelecionado = listaProdutos.get(posicao);
                 ItensPedido pedidosItem = new ItensPedido();
+
                 pedidosItem.setIdProduto(produtoSelecionado.getIdProdutos());
                 pedidosItem.setNomeProduto(produtoSelecionado.getNome());
                 pedidosItem.setPrecoProduto(produtoSelecionado.getPreco());
@@ -263,7 +335,7 @@ public class ProdutosFragment extends Fragment {
 
 
                 }
-
+                pedidoRecuperado.setNomeComercio(empresaSelecionada.getNomeEmpresa());
                 pedidoRecuperado.setNome(cliente.getNome());
                 pedidoRecuperado.setEndereco(cliente.getEndereco());
                 pedidoRecuperado.setItens(itensCarrinho);
@@ -416,10 +488,10 @@ public class ProdutosFragment extends Fragment {
                 pedidoRecuperado.setMetodoPagamento(metodoCartaoDinheiro);
                 pedidoRecuperado.setObservacao(observacaoPedido);
 
-                pedidoRecuperado.setStatus("Confirmado");
+                pedidoRecuperado.setStatus("Em preparo");
 
                 //TODO:Chamando metodo finalizar pedido
-                pedidoRecuperado.metodoTestePedido();
+                pedidoRecuperado.metodoFinalizarPedidoTab();
 
                 //TODO:Chamando metodo remover pedido
                 pedidoRecuperado.metodoRemovePedidosCliente();
@@ -453,7 +525,7 @@ public class ProdutosFragment extends Fragment {
         alertaDialogo.setContentView(R.layout.win_layout_dialog);
         alertaDialogo.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
-        ImageView imageView = alertaDialogo.findViewById(R.id.imagemClose);
+
         Button btnOk = alertaDialogo.findViewById(R.id.botaookay);
 
         btnOk.setOnClickListener(new View.OnClickListener() {

@@ -15,6 +15,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.ValueEventListener;
 
 import br.com.app.hungerdelivery.CategoriaComercios;
+import br.com.app.hungerdelivery.Entregas;
 import br.com.app.hungerdelivery.Home;
 import br.com.app.hungerdelivery.PainelEmpresa;
 import model.Usuarios;
@@ -98,7 +99,7 @@ public class UsuarioFirebase {
 
                     } else if (recuperarTipoUsuario.equals("Entregador")) {
 
-                        activity.startActivity(new Intent(activity, CategoriaComercios.class));
+                        activity.startActivity(new Intent(activity, Entregas.class));
                     }
 
 

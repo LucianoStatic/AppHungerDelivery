@@ -13,37 +13,31 @@
         android:background="#FFFEFE"
         tools:context=".MainActivity">
 
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#302E2E"
+
             android:gravity="center"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:drawableLeft="@drawable/delivery2"
-                android:fontFamily="@font/bangers"
-                android:gravity="center"
-                android:text="Hunger Delivery!"
-
-                android:textColor="#ff1727"
-                android:textSize="40dp" />
-
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/motoboy"/>
 
         </LinearLayout>
 
 
         <TextView
-            android:layout_width="162dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="35dp"
             android:layout_marginTop="45dp"
-            android:fontFamily="@font/advent_pro_medium"
-            android:text="Inscreva-se"
+            android:text="Entregador(a)"
             android:textColor="#ff1727"
+            android:drawableLeft="@drawable/ic_painelentregador"
             android:textSize="35dp"
             android:textStyle="bold" />
 
@@ -52,7 +46,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="35dp"
             android:layout_marginTop="35dp"
-            android:fontFamily="@font/advent_pro_medium"
             android:text="Nome completo"
             android:textColor="#3A3939"
             android:textSize="18dp"
@@ -78,7 +71,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="35dp"
             android:layout_marginTop="20dp"
-            android:fontFamily="@font/advent_pro_medium"
             android:text="Email"
             android:textColor="#3A3939"
             android:textSize="18dp"
@@ -104,7 +96,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="20dp"
-            android:fontFamily="@font/advent_pro_medium"
             android:text="Senha"
             android:textColor="#454343"
             android:textSize="18dp"
@@ -131,15 +122,16 @@
         <Button
             android:id="@+id/botaoCadastrarEntregador"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            android:backgroundTint="#ff1727"
+            android:layout_height="45dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="20dp"
             android:onClick="metodoSalvarCadastroEntregador"
             android:text="Inscreva-se"
+            android:background="@drawable/background_sign_up"
 
-            android:fontFamily="@font/advent_pro_medium"
-            android:textSize="25dp"
+            android:textSize="18sp"
             android:textColor="#fff"
             />
 

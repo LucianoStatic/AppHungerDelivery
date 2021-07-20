@@ -1,97 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="350dp"
+    android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_gravity="center"
     android:layout_height="match_parent">
-    
+
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:cardCornerRadius="20dp">
+        android:layout_width="429dp"
+        android:layout_height="558dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="84dp"
+        app:cardCornerRadius="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="545dp">
 
-
-            <ImageView
-                android:id="@+id/imagemClose"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="320dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0"
-                app:srcCompat="@drawable/ic_close" />
 
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="109dp"
-                android:layout_marginTop="74dp"
+                android:layout_marginTop="64dp"
                 android:layout_marginEnd="109dp"
-                android:text="You Win"
-                android:textColor="#ffc107"
-                android:textSize="36sp"
+                android:fontFamily="@font/alef_bold"
+                android:text="Olá, aguarde um pouco!"
+
+                android:textColor="#ff1727"
+                android:textSize="35sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="0.504"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="350dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="143dp"
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="316dp"
+                android:layout_height="281dp"
+                android:layout_gravity="center"
+
+                android:layout_marginTop="168dp"
+                android:scaleType="centerCrop"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/trofeu" />
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="preparandoAnimacao.json"
+                app:lottie_loop="true" />
 
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="449dp"
-                android:layout_marginEnd="24dp"
-                android:layout_marginBottom="378dp"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="120dp"
+                android:fontFamily="@font/alef"
                 android:gravity="center"
-                android:text="This is random text, for purpuse"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:text="O seu pedido já está em preparo"
+                android:textColor="#ff1727"
+                android:textSize="23sp"
+                android:textStyle="normal"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
                 android:id="@+id/botaookay"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
+                android:layout_width="208dp"
+                android:layout_height="72dp"
                 android:layout_marginStart="132dp"
                 android:layout_marginTop="499dp"
                 android:layout_marginEnd="130dp"
                 android:layout_marginBottom="299dp"
-                android:text="Ok"
+                android:backgroundTint="#ff1727"
+                android:fontFamily="@font/alef_bold"
+                android:text="Fechar"
+                android:textColor="#ffffff"
+                android:textSize="19sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.268"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.092" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     </androidx.cardview.widget.CardView>
 
-
-    
-    
 
 </androidx.constraintlayout.widget.ConstraintLayout>

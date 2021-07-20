@@ -7,8 +7,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -18,14 +23,20 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import adapter.AdapterPedido;
 import adapter.AdapterProduto;
 import dmax.dialog.SpotsDialog;
 import helper.ConfiguracaoFirebase;
 import helper.UsuarioFirebase;
+import listener.RecyclerItemClickListener;
+import model.Clientes;
+import model.ItensPedido;
 import model.Pedido;
+import model.Produtos;
 
 public class ComandaPedidos extends AppCompatActivity {
     private RecyclerView recyclerComandaPedido;
@@ -33,7 +44,13 @@ public class ComandaPedidos extends AppCompatActivity {
     private List<Pedido> listaPedidos = new ArrayList<>();
     private AlertDialog dialog;
     private DatabaseReference firebaseRef;
+    private Pedido pedidoRecuperado;
     private String idEmpresaLogada;
+    private String idClienteLogado;
+    private Clientes cliente;
+    private String idEmpresaLog;
+    private List<Produtos> listaProdutos = new ArrayList<>();
+    private List<ItensPedido> itensCarrinho = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +82,41 @@ public class ComandaPedidos extends AppCompatActivity {
 
         recuperarListaPedidos();
 
+        //TODO: Metodo de clique para  o RecicleView
+        recyclerComandaPedido.addOnItemTouchListener(
+                new RecyclerItemClickListener(this, recyclerComandaPedido, new RecyclerItemClickListener.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(View view, int position) {
+
+                        if(listaPedidos !=null){
+
+                            Pedido pedido = listaPedidos.get(position);
+                            String sts  = "Pronto";
+
+                           pedido.metodoStatus();
+
+                            recuperarListaPedidos();
+
+                        }
+
+
+
+                    }
+
+                    @Override
+                    public void onLongItemClick(View view, int position) {
+
+                    }
+
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                    }
+                })
+        );
+
+
+
 
     }
 
@@ -82,11 +134,11 @@ public class ComandaPedidos extends AppCompatActivity {
 
         //TODO: Metodo de consulta la no banco de dados firebase
         DatabaseReference pedidoRef = firebaseRef
-                .child("pedidoConfirmados")
-                .child(idEmpresaLogada);
+                .child("pedidoPreparo")
+                ;
         //TODO: Metodo pra fazer pesquisa personalizada com uma QUERY
         Query pedidoPesquisa = pedidoRef.orderByChild("status")
-                .equalTo("Confirmado");
+                .equalTo("Em preparo");
 
         pedidoPesquisa.addValueEventListener(new ValueEventListener() {
             @Override
@@ -127,9 +179,17 @@ public class ComandaPedidos extends AppCompatActivity {
     }
 
 
+
+
+
+
     //TODO: Metodo inicializar componentes
     private void inicializarComponentes() {
 
         recyclerComandaPedido = findViewById(R.id.reciclerComandaPedidos);
     }
+
+
+
+
 }

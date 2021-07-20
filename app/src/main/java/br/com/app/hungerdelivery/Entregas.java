@@ -78,11 +78,11 @@ public class Entregas extends AppCompatActivity {
 
         //TODO: Metodo de consulta la no banco de dados firebase
         DatabaseReference pedidoRef = firebaseRef
-                .child("pedidoTeste");
+                .child("pedidoPreparo");
 
         //TODO: Metodo pra fazer pesquisa personalizada com uma QUERY
         Query pedidoPesquisa = pedidoRef.orderByChild("status")
-                .equalTo("Confirmado");
+                .equalTo("Pronto");
 
         pedidoPesquisa.addValueEventListener(new ValueEventListener() {
             @Override
