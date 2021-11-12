@@ -18,5 +18,9 @@ Olá pessoas, esse é o App Hunger Delivery, um projetinho pessoal que estou des
 * Lib de imagem: Picasso/SquareUp
 </table>
 
+# Preview 1
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/15662296/141402198-e21a7663-c3a1-4b7f-a58f-87c037b218d7.gif)
+
+
 
 
