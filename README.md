@@ -21,6 +21,8 @@ Olá pessoas, esse é o App Hunger Delivery, um projetinho pessoal que estou des
 # Preview 1
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/15662296/141402198-e21a7663-c3a1-4b7f-a58f-87c037b218d7.gif)
 
+# Preview 2
+![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/15662296/141403243-805f4f20-a6b3-4b6e-b645-6586dcb6375a.gif)
 
 
 
